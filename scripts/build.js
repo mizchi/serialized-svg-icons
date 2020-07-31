@@ -3,16 +3,13 @@ const glob = require("glob-promise");
 const path = require("path");
 const fs = require("fs/promises");
 const camelcase = require("camelcase");
-const findPackage = require("find-package");
 const { icons } = require("../src/icons");
 
 // file path
 const rootDir = path.resolve(__dirname, "../");
 const DIST = path.resolve(rootDir, ".");
-const LIB = path.resolve(rootDir, "./lib");
 
 // logic
-
 async function getIconFiles(content) {
   return glob(content.files);
 }
