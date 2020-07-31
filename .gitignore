@@ -108,4 +108,17 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-
+ai/
+bs/
+di/
+fa/
+fc/
+fi/
+gi/
+go/
+gr/
+io/
+md/
+ri/
+ti/
+wi/

@@ -9,12 +9,12 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "fontawesome/svgs/+(brands|solid)/*.svg"
+            "Font-Awesome/svgs/+(brands|solid)/*.svg"
           ),
           formatter: (name) => `Fa${name}`,
         },
         {
-          files: path.resolve(__dirname, "fontawesome/svgs/regular/*.svg"),
+          files: path.resolve(__dirname, "Font-Awesome/svgs/regular/*.svg"),
           formatter: (name) => `FaReg${name}`,
         },
       ],
@@ -29,7 +29,7 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "../../../../node_modules/ionicons/dist/collection/icon/svg/*.svg"
+            "../../node_modules/ionicons/dist/svg/*.svg"
           ),
           formatter: (name) => `Io${name}`,
         },
@@ -75,7 +75,7 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "../../../../node_modules/octicons/build/svg/*.svg"
+            "../../node_modules/octicons/build/svg/*.svg"
           ),
           formatter: (name) => `Go${name}`,
         },
@@ -91,7 +91,7 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "../../../../node_modules/feather-icons/dist/icons/*.svg"
+            "../../node_modules/feather-icons/dist/icons/*.svg"
           ),
           formatter: (name) => `Fi${name}`,
         },
