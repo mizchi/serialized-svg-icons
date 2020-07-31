@@ -1,6 +1,6 @@
 # serialized-svg-icons
 
-framework agnostic svg text
+framework agnostic svg definition loader forked by [react\-icons/react\-icons](https://github.com/react-icons/react-icons)
 
 ## Install
 
@@ -12,139 +12,13 @@ npm install --save serialized-svg-icons
 
 ```js
 import { FaBeer } from "serialized-svg-icons";
+console.log(FaBeer);
+// {"tag":"svg","attr":{"viewBox":"0 0 448 512"},"child":[{"tag":"path","attr":{"d":"M368 96h-48V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56v400c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24v-42.11l80.606-35.977C429.396 365.063 448 336.388 448 304.86V176c0-44.112-35.888-80-80-80zm16 208.86a16.018 16.018 0 0 1-9.479 14.611L320 343.805V160h48c8.822 0 16 7.178 16 16v128.86zM208 384c-8.836 0-16-7.164-16-16V144c0-8.836 7.164-16 16-16s16 7.164 16 16v224c0 8.836-7.164 16-16 16zm-96 0c-8.836 0-16-7.164-16-16V144c0-8.836 7.164-16 16-16s16 7.164 16 16v224c0 8.836-7.164 16-16 16z"}}]};
 ```
 
-forked by below.
+Use it on your own framework
 
----
-
-## Configuration
-
-You can configure react-icons props using [React Context API](https://reactjs.org/docs/context.html).
-
-_Requires **React 16.3** or higher._
-
-```jsx
-import { IconContext } from "react-icons";
-
-<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-  <div>
-    <FaFolder />
-  </div>
-</IconContext.Provider>;
-```
-
-| Key         | Default               | Notes                              |
-| ----------- | --------------------- | ---------------------------------- |
-| `color`     | `undefined` (inherit) |                                    |
-| `size`      | `1em`                 |                                    |
-| `className` | `undefined`           |                                    |
-| `style`     | `undefined`           | Can overwrite size and color       |
-| `attr`      | `undefined`           | Overwritten by other attributes    |
-| `title`     | `undefined`           | Icon description for accessibility |
-
-## Migrating from version 2 -> 3
-
-### Change import style
-
-Import path has changed. You need to rewrite from the old style.
-
-```jsx
-// OLD IMPORT STYLE
-import FaBeer from "react-icons/lib/fa/beer";
-
-class Question extends React.Component {
-  render() {
-    return (
-      <h3>
-        {" "}
-        Lets go for a <FaBeer />?{" "}
-      </h3>
-    );
-  }
-}
-```
-
-```jsx
-// NEW IMPORT STYLE
-import { FaBeer } from "react-icons/fa";
-
-class Question extends React.Component {
-  render() {
-    return (
-      <h3>
-        {" "}
-        Lets go for a <FaBeer />?{" "}
-      </h3>
-    );
-  }
-}
-```
-
-Ending up with a large JS bundle? Check out [this issue](https://github.com/react-icons/react-icons/issues/154).
-
-### Adjustment CSS
-
-From version 3, `vertical-align: middle` is not automatically given. Please use IconContext to specify className or specify an inline style.
-
-#### Global Inline Styling
-
-```tsx
-<IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-```
-
-#### Global `className` Styling
-
-Component
-
-```tsx
-<IconContext.Provider value={{ className: 'react-icons' }}>
-```
-
-CSS
-
-```css
-.react-icons {
-  vertical-align: middle;
-}
-```
-
-### TypeScript native support
-
-Dependencies on `@types/react-icons` can be deleted.
-
-#### Yarn
-
-```bash
-yarn remove @types/react-icons
-```
-
-#### NPM
-
-```bash
-npm remove @types/react-icons
-```
-
-## Contributing
-
-### Development
-
-```bash
-yarn
-yarn submodule  # fetch icon sources
-cd packages/react-icons
-yarn build
-```
-
-## Why React SVG components instead of fonts?
-
-SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
-
-## Related Projects
-
-- [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
-
-## Licence
+## LICENSE
 
 MIT
 
