@@ -134,11 +134,7 @@ async function writeIconModule(icon) {
       exists.add(name);
 
       const modRes = generateIconRow(icon, name, iconData);
-      await appendFile(
-        path.resolve(DIST, icon.id, "index.es.js"),
-        modRes,
-        "utf8"
-      );
+      await appendFile(path.resolve(DIST, icon.id, "index.js"), modRes, "utf8");
       exists.add(file);
     }
   }
