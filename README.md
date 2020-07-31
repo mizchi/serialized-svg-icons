@@ -18,52 +18,6 @@ forked by below.
 
 ---
 
-<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
-
-# [React Icons](https://react-icons.netlify.com)
-
-[![npm][npm-image]][npm-url]
-
-[npm-image]: https://img.shields.io/npm/v/react-icons.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/react-icons
-
-Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
-
-## Installation
-
-### Yarn
-
-```bash
-yarn add react-icons
-```
-
-### NPM
-
-```bash
-npm install react-icons --save
-```
-
-## Usage
-
-```jsx
-import { FaBeer } from "react-icons/fa";
-
-class Question extends React.Component {
-  render() {
-    return (
-      <h3>
-        {" "}
-        Lets go for a <FaBeer />?{" "}
-      </h3>
-    );
-  }
-}
-```
-
-[View the documentation](https://react-icons.netlify.com) for further usage examples and how to use icons from other packages. _NOTE_: each Icon package has it's own subfolder under `react-icons` you import from.
-
-For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
-
 ## Icons
 
 | Icon Library                                                            | License                                                                                           | Version                                  |
