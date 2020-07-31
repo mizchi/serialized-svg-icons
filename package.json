@@ -59,6 +59,7 @@
   },
   "files": [
     "index.js",
+    "LICENSE",
     "ai",
     "bs",
     "di",
